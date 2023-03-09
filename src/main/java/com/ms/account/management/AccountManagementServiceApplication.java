@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
 @SpringBootApplication
-public class AssignmentApplication {
+public class AccountManagementServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AssignmentApplication.class, args);
+		SpringApplication.run(AccountManagementServiceApplication.class, args);
 	}
 
 }

@@ -11,6 +11,9 @@ Required functionality and Endpoints:
 - View account transactions
   - GET /api/v1/acctmgmt/users/{user_id}/accounts/{account_id}/transactions
 
+API docs
+http://localhost:8080/swagger-ui/index.html#/
+
 Technologies and Tools used:
 
 - SpringBoot 2.7
