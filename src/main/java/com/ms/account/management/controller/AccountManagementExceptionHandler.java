@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ValidationException;
 
 @Slf4j
 @RestControllerAdvice
@@ -24,8 +25,8 @@ public class AccountManagementExceptionHandler {
         return new ResponseEntity<>(ApiError.buildErrorResponse(exception, HttpStatus.NOT_FOUND), HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(BadRequestException.class)
-    public ResponseEntity<ApiError> handleBadRequestException(final BadRequestException exception,
+    @ExceptionHandler({BadRequestException.class, ValidationException.class})
+    public ResponseEntity<ApiError> handleBadRequestException(final Exception exception,
                                                                         final HttpServletRequest request) {
         logException(exception, request, HttpStatus.BAD_REQUEST);
         return new ResponseEntity<>(ApiError.buildErrorResponse(exception, HttpStatus.BAD_REQUEST), HttpStatus.BAD_REQUEST);

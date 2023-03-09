@@ -24,7 +24,6 @@ import javax.validation.constraints.Pattern;
 @Validated
 public class AccountManagementController {
 
-    public static final String API_STATUS_KEY = "apiStatus";
     private final AccountManagementService accountManagementService;
 
     /**
@@ -41,7 +40,6 @@ public class AccountManagementController {
             ) {
 
         AccountListResponse accounts = accountManagementService.getAccountsByUserId(userId);
-        request.setAttribute(API_STATUS_KEY, HttpStatus.OK);
 
         return ResponseEntity.ok(accounts);
 
@@ -63,7 +61,6 @@ public class AccountManagementController {
     ) {
 
         TransactionListResponse transactions = accountManagementService.getTransactionsByUserIdAndAccountId(userId,accountId);
-        request.setAttribute("apiStatus", HttpStatus.OK);
 
         return ResponseEntity.ok(transactions);
 

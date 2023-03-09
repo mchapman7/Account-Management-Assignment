@@ -1,4 +1,4 @@
-# ANZ Wholesale Engineering Project (Backend Development)
+# Wholesale Engineering Project (Backend Development)
 
 ### Reference Documentation
 This account management service application is to build the backend REST APIs
@@ -16,6 +16,7 @@ http://localhost:8080/swagger-ui/index.html#/
 
 Technologies and Tools used:
 
+- Java 11
 - SpringBoot 2.7
 - Spring Data JPA
 - H2 database

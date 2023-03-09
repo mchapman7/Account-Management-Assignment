@@ -33,7 +33,7 @@ public class AccountManagementService {
         List<Account> accountRepositoryList = accountRepository.findByUserUserId(Long.valueOf(userId));
 
         if (accountRepositoryList.isEmpty()) {
-            log.info("message=\"getAccountsByUserId is empty {} \"", accountRepositoryList.size());
+            log.warn("message=\"getAccountsByUserId is empty {} \"", accountRepositoryList.size());
             throw new DataNotFoundException(String.format(NO_ACCOUNTS_FOR_THE_USER, userId));
         }
         AccountListResponse accounts = AccountListResponse.builder()
@@ -73,7 +73,7 @@ public class AccountManagementService {
                 transactionRepository.findByAccountUserUserIdAndAccountAccountId(Long.valueOf(userId), Long.valueOf(accountId));
 
         if (transactionRepositoryList.isEmpty()) {
-            log.info("message=\"getTransactionsByUserIdAndAccountId is empty {} \"", transactionRepositoryList.size());
+            log.warn("message=\"getTransactionsByUserIdAndAccountId is empty {} \"", transactionRepositoryList.size());
             throw new DataNotFoundException(String.format(NO_TRANSACTIONS_FOR_THE_USER_ID_AND_ACCOUNT_ID, userId, accountId));
         }
         TransactionListResponse transactionListResponse = TransactionListResponse.builder()

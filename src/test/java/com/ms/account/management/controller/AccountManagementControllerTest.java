@@ -68,13 +68,13 @@ public class AccountManagementControllerTest {
     }
 
     @Test
-    public void shouldReturnInternalServerExceptionForInvalidUserId() throws Exception {
+    public void shouldReturnBadRequestExceptionForInvalidUserId() throws Exception {
 
         mockMvc.perform(MockMvcRequestBuilders
                         .get("/api/v1/acctmgmt/users/111/accounts")
                         .accept(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().is5xxServerError());
+                .andExpect(status().isBadRequest());
     }
 
     @Test
