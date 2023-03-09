@@ -1,21 +1,23 @@
-# ANZ Wholesale Engineering Sample Project (Backend Development)
+# ANZ Wholesale Engineering Project (Backend Development)
 
 ### Reference Documentation
-The sample application is to build the backend REST APIs
+This account management service application is to build the backend REST APIs
 needed to support a web application to that allows a user to view accounts and
 subsequently view transactions on any of the accounts they hold.
 
 Required functionality and Endpoints:
 - View account list
-  - GET /api/v1/acctmgmt/user/{user_id}/accounts
+  - GET /api/v1/acctmgmt/users/{user_id}/accounts
 - View account transactions
-  - GET /api/v1/acctmgmt/user/{user_id}/account/{account_id}/transactions
+  - GET /api/v1/acctmgmt/users/{user_id}/accounts/{account_id}/transactions
 
 Technologies and Tools used:
 
 - SpringBoot 2.7
 - Spring Data JPA
 - H2 database
+- Mockito
+- Gradle
 
 ### Running the app locally
 

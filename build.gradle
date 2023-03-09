@@ -4,8 +4,8 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
-group = 'com.ms.account.overview'
-version = '1.0.0-ACCOUNT_OVERVIEW'
+group = 'com.ms.account.management'
+version = '1.0.0-account-management-ms'
 sourceCompatibility = '11'
 
 configurations {
